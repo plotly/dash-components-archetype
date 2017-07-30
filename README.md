@@ -29,7 +29,7 @@ structure as the [`init/demo`](./init/demo) directory in this archetype, you can
 start up a demo development server:
 
 ```sh
-$ builder run demo
+$ npm run demo
 $ open http://localhost:9000
 ```
 
