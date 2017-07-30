@@ -1,5 +1,5 @@
 'use strict';
-
+process.env.NODE_ENV = 'production';
 var compose = require('ramda').compose;
 
 var babel = require('./partials/babel');

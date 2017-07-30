@@ -4,6 +4,7 @@
  *
  * This configuration is the same as basic one-shot version, just with coverage.
  */
+process.env.NODE_ENV = 'test';
 var path = require('path');
 var webpackCovCfg = require('../webpack/webpack.config.coverage');
 
