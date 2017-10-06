@@ -14,6 +14,7 @@ module.exports = {
   },
 
   prompts: {
+    
     packageName: {
       message: 'Please name your component suite.',
       validate: function (val) {
@@ -36,6 +37,13 @@ module.exports = {
       message: 'License organization (e.g., you or your company)',
       default: function (data) {
         return data.packageGitHubOrg;
+      }
+    },
+    email: {
+      message: 'A contact email',
+      validate: function(val) {
+        // http://emailregex.com/
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(val) || 'Enter a valid email address';
       }
     }
   },
@@ -61,6 +69,18 @@ module.exports = {
         .toLowerCase();
 
       cb(null, convertedPackageName);
+    },
+    packageNameCamelCase: function (data, cb) {
+      var pieces = data.packageName
+        .toLowerCase()
+        .split("-");
+        
+      for (var i = 1; i < pieces.length; i++) {
+        var piece = pieces[i];
+        pieces[i] = piece.charAt(0).toUpperCase() + piece.slice(1);
+      }
+
+      cb(null, pieces.join(""));
     }
   }
 };
