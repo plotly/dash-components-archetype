@@ -1,2 +1,0 @@
----
-  extends: ./node_modules/dash-components-archetype/config/eslint/eslintrc-react.json
