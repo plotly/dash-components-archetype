@@ -20,14 +20,24 @@ export default class ExampleComponent extends Component {
                     onChange={e => {
                         /*
                          * Send the new value to the parent component.
+                         # setProps is a prop that is automatically supplied
+                         * by dash's front-end ("dash-renderer").
                          * In a Dash app, this will send the data back to the
                          * Python Dash app server.
+                         * If the component properties are not "subscribed"
+                         * to by a Dash callback, then Dash dash-renderer
+                         * will not pass through `setProps` and it is expected
+                         * that the component manages its own state.
                          */
                          if (setProps) {
                              setProps({
                                 value: e.target.value
                             });
-                         }
+                        } else {
+                            this.setState({
+                                value: e.target.value
+                            })
+                        }
                     }}
                 />
             </div>
