@@ -8,7 +8,7 @@
       "start": "webpack-serve ./webpack.serve.config.js --open",
       "build:js-dev": "webpack --mode development",
       "build:js": "webpack --mode production",
-      "build:py": "./extract-meta src/lib/components > <%= pageNameUnderscored %>/metadata.json"
+      "build:py": "node ./extract-meta src/lib/components > <%= pageNameUnderscored %>/metadata.json"
   },
   "dependencies": {
     "prop-types": "^15.5.9",
