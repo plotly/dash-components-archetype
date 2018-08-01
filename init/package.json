@@ -14,6 +14,7 @@
   "homepage": "https://github.com/<%= packageGitHubOrg %>/<%= packageName %>",<% } %>
   "scripts": {
     "copy-lib": "copyfiles -u 1 lib/* <%= packageNameUnderscored %>",
+    "generate-python-classes": "python -c 'import dash; dash.development.component_loader.generate_classes(\"<%= packageNameUnderscored %>\")'",
     "demo": "builder run demo",
     "install-local": "npm run copy-lib && python setup.py install",
     "prepublish": "npm test && builder run build-dist && npm run copy-lib",

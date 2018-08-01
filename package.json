@@ -1,6 +1,6 @@
 {
   "name": "dash-components-archetype",
-  "version": "0.2.11",
+  "version": "0.3.0",
   "description": "A [Builder](https://github.com/FormidableLabs/builder) Archetype for Dash components suites",
   "main": "index.js",
   "dependencies": {
@@ -28,9 +28,9 @@
   },
   "scripts": {
     "builder:check": "eslint --fix --ignore-path .gitignore --ext *.js config init",
-    "build-dev": "builder run clean-lib && builder run extract-metadata && webpack -w --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
+    "build-dev": "builder run clean-lib && builder run extract-metadata && builder run generate-python-classes && webpack -w --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
     "build-dev-lib": "webpack -w --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
-    "build-dist": "builder run clean-lib && builder run extract-metadata && webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dist.js",
+    "build-dist": "builder run clean-lib && builder run extract-metadata && builder run generate-python-classes && webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dist.js",
     "check": "builder run lint && builder run test-frontend-cov",
     "clean-lib": "mkdirp lib && rimraf lib/*",
     "demo": "webpack-dev-server --hot --inline --port=9000 --content-base demo --config=node_modules/dash-components-archetype/config/webpack/webpack.config.demo.js",

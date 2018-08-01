@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.3.0] - 2018-07-11
+### Changed
+- a `generate-python-classes` build step is added to build scripts in `package.json`.
+- Components are now imported from .py class files in the `packageNameUnderscored` directory. 
+
 ## [0.2.11] - 2017-08-08
 ### Fixed
 - Fix src location of demo HTML page
