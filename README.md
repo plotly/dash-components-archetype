@@ -1,4 +1,6 @@
-# Dash Components Archetype
+# Dash Components Archetype (Deprecated)
+
+**Note**: This repo, and this way of creating Dash Components, has been deprecated. Please use the new Dash component boilerplate: [https://github.com/plotly/dash-component-boilerplate/](https://github.com/plotly/dash-component-boilerplate/)
 
 ## Overview
 
