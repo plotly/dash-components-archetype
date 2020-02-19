@@ -49,7 +49,7 @@
     "Dash",
     "Builder"
   ],
-  "author": "Per Nilsson <per@sproutlab.com>, Chris Parmer <chris@plot.ly>",
+  "author": "Per Nilsson <per@sproutlab.com>, Chris Parmer <chris@plotly.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/plotly/dash-components-archetype/issues"
