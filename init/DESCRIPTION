@@ -1,0 +1,15 @@
+Package: <%= packageNameCamelCase %>
+Title: <%= packageDescription || packageName %>
+Version: 0.0.1
+Authors@R: c(
+  person(family = "<%= licenseOrg %>", role = c("aut", "cre"), email = "<%= email %>"),
+  person("Carson", "Sievert", role = "aut"))
+Description: <%= packageDescription || packageName %>
+Suggests: 
+	testthat,
+	roxygen2
+License: MIT + file LICENSE
+URL: https://github.com/<%= packageGitHubOrg %>/<%= packageName %>
+BugReports: https://github.com/<%= packageGitHubOrg %>/<%= packageName %>/issues
+Encoding: UTF-8
+LazyData: true

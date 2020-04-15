@@ -5,7 +5,6 @@ lib/
 lib/bundle.js*
 node_modules/
 <%= packageNameUnderscored %>/metadata.json
-<%= packageNameUnderscored %>/bundle.js*
 .npm
 vv/
 venv/

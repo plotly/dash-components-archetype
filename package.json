@@ -35,7 +35,7 @@
     "clean-lib": "mkdirp lib && rimraf lib/*",
     "demo": "webpack-dev-server --hot --inline --port=9000 --content-base demo --config=node_modules/dash-components-archetype/config/webpack/webpack.config.demo.js",
     "extract-metadata": "mkdirp lib && react-docgen --pretty -o lib/metadata.json src/components && node -e \"const fs = require('fs'); const path = require('path'); const m = JSON.parse(fs.readFileSync('./lib/metadata.json')); const r = {}; Object.keys(m).forEach(k => r[k.split(path.sep).join('/')] = m[k]); fs.writeFileSync('./lib/metadata.json', JSON.stringify(r, '\t', 2));\"",
-    "lint": "eslint --fix --ignore-path .gitignore .",
+    "lint": "eslint --fix --ignore-path .gitignore . --ext *.js src demo test",
     "test-frontend": "karma start node_modules/dash-components-archetype/config/karma/karma.conf.js",
     "test-frontend-cov": "karma start node_modules/dash-components-archetype/config/karma/karma.conf.coverage.js",
     "test-frontend-debug": "karma start --debug --single-run=false node_modules/dash-components-archetype/config/karma/karma.conf.debug.js",
