@@ -65,12 +65,12 @@ The best way to test your components in the real Dash context is by linking into
         # Transpile components to `lib/` and watch for changes
         $ npm start
 
-2. Link module into `dash2` project
+2. Link module into [`dash-renderer` project](https://github.com/plotly/dash-renderer)
 
-        # In the `dash2/renderer` project directory:
+        # In the `dash-renderer` project directory:
         $ npm link [YOUR-COMPONENT-SUITE-NAME]
 
-Now you should be able to restart the webpack process (in `dash2/renderer`:
+Now you should be able to restart the webpack process (in `dash-renderer`:
 `ctrl-c`, `npm start`), after which webpack will automatically pick up new
 changes to the component suite.
 
